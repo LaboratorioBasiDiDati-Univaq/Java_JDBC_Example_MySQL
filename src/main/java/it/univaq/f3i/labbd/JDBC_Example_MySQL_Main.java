@@ -7,7 +7,12 @@ package it.univaq.f3i.labbd;
  * Questo esempio lavora sul database "campionati" e richiede che esso sia
  * popolato con i dati e le procedure sviluppate a lezione, nonchè che sia
  * presente nel DBMS un utente specifico (vedi qui sotto) con accesso al
- * database
+ * database.
+ * 
+ * Il codice è può ricreare il database e popolarlo, ma in questo caso
+ * è necessario che l'utente con cui si accede abbia i privilegi globali SUPER
+ * (per creare le funzioni) nonchè quelli di creazione tabelle, procedure e foreign key
+ * sul datbase campionati-
  */
 public class JDBC_Example_MySQL_Main extends JDBC_Example {
 
@@ -31,6 +36,8 @@ public class JDBC_Example_MySQL_Main extends JDBC_Example {
      */
     public static void main(String[] args) {
         JDBC_Example_MySQL_Main instance = new JDBC_Example_MySQL_Main();
+        //impostare il primo parametro a true per ricreare l'intero database, comprese le procedure
+        //in questo caso però sono necessari ulteriori privilegi per l'utente connesso
         instance.run(false, true, true);
     }
 }
