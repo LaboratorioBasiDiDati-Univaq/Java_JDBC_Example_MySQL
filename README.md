@@ -1,4 +1,4 @@
-#  JDBC_Example
+#  Java_JDBC_Example_MySQL
 > Accessing a relational database with Java and JDBC
  
 This example shows how to connect to a (MySQL) DBMS in Java using the JDBC libraries and drivers. It also shows how to submit different SQL statemennts to the DBMS, including data insertion and update queries, selection queries, procedure and function calls, with and without transaction support.
@@ -12,7 +12,11 @@ This is a *sample application* developed during the lectures of the  [**Laborato
 ## Installation
 
 This is a Maven-based project. Simply download the code and open it in any Maven-enabled IDE such as Netbeans or Eclipse. 
-Since this example uses a MySQL database, you need a working instance of **MySQL version 8 or above**. Instructions on how to setup the sample database are embedded as comments in the class code.
+Since this example uses a MySQL database, you need a working instance of **MySQL version 8 or above**. The application is able to create and
+populate/reset the database before running the example queries. The creation and population scripts are in the resources folder. 
+However, you always need to manually create the database schema and the database user as indicated in the code. The main application
+class contains three boolean switches that can be used to control this behaviour.
+
  
 ---
 
