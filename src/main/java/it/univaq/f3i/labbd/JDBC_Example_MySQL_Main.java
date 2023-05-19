@@ -24,7 +24,7 @@ public class JDBC_Example_MySQL_Main extends JDBC_Example {
     private static final String CONNECTION_STRING
             = "jdbc:mysql://localhost:3306/" + DB_NAME + "?noAccessToProcedureBodies=true" + "&serverTimezone=Europe/Rome";
     //l'utente deve avere i permessi INSERT, UPDATE, SELECT ed EXECUTE sul database
-    //se volete anche ricreare al strututra del database e delle procedure, saranno necessari ulteriori privilegi (CREATE, FOREIGN KEY, SUPER)
+    //se volete anche ricreare al struttura del database e delle procedure, saranno necessari ulteriori privilegi (CREATE, FOREIGN KEY, SUPER)
     private static final String DB_USER = "campionatiUser";
     private static final String DB_PASSWORD = "campionatiPwd";
 
