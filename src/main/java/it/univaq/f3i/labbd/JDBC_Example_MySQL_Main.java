@@ -20,9 +20,10 @@ public class JDBC_Example_MySQL_Main extends JDBC_Example {
     private static final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
     private static final String DB_NAME = "campionati";
     //il parametro noAccessToProcedureBodies nella connection string è usato per invocare le procedure senza avere permessi avanzati
-    //il parametro serverTimezone serve a specificare la timezone in cui ci troviamo (può essere omesso se questo parametro è configurato sul server)
+    //i parametri connectionTimeZone e forceConnectionTimeZoneToSession servono ad allineare la timezone del driver con quella impostata sul server
+    //vedi https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-time-instants.html
     private static final String CONNECTION_STRING
-            = "jdbc:mysql://localhost:3306/" + DB_NAME + "?noAccessToProcedureBodies=true" + "&serverTimezone=Europe/Rome";
+            = "jdbc:mysql://localhost:3306/" + DB_NAME + "?noAccessToProcedureBodies=true" + "&connectionTimeZone=LOCAL&forceConnectionTimeZoneToSession=false";
     //l'utente deve avere i permessi INSERT, UPDATE, SELECT ed EXECUTE sul database
     //se volete anche ricreare al struttura del database e delle procedure, saranno necessari ulteriori privilegi (CREATE, FOREIGN KEY, SUPER)
     private static final String DB_USER = "campionatiUser";
