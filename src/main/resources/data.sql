@@ -17,8 +17,8 @@ INSERT INTO `campionato`(anno,nome)
 VALUES(2020,"campionato di calcio serie B");
 
 INSERT INTO `arbitro`
-(`ID`,`nome`,`cognome`)
-VALUES (1,"Pinco","Arbitro");
+(`ID`,`CF`,`nome`,`cognome`)
+VALUES (1,"AAABBB11C22D333E","Pinco","Arbitro");
 
 INSERT INTO `giocatore`
 (`ID`,`nome`,`cognome`,`dataNascita`,`luogoNascita`)
